@@ -30,6 +30,68 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; j
 .hero h1 em { font-style: italic; color: var(--vermillion); }
 .hero-desc { font-size: 17px; color: var(--muted); max-width: 420px; line-height: 1.8; margin-bottom: 20px; }
 
+.hero-term-wrap {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  cursor: help;
+  outline: none;
+}
+.hero-term-wrap:focus-visible {
+  outline: 2px solid var(--vermillion);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.hero-term-trigger {
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--ink);
+  border-bottom: 1px dotted rgba(181,52,26,0.45);
+  transition: border-color 0.2s, color 0.2s;
+}
+.hero-term-wrap:hover .hero-term-trigger,
+.hero-term-wrap:focus-visible .hero-term-trigger {
+  border-bottom-color: var(--vermillion);
+  color: var(--vermillion);
+}
+.hero-term-tooltip {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+  width: min(calc(100vw - 64px), 400px);
+  max-width: 400px;
+  background: var(--ink);
+  color: var(--parchment);
+  padding: 18px 20px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 14px;
+  line-height: 1.65;
+  z-index: 250;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.22s, transform 0.22s, visibility 0.22s;
+  border-left: 3px solid var(--vermillion);
+  box-shadow: 0 12px 40px rgba(28,23,19,0.18);
+}
+.hero-term-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 20px;
+  border: 8px solid transparent;
+  border-bottom-color: var(--ink);
+  margin-bottom: -1px;
+}
+.hero-term-wrap:hover .hero-term-tooltip,
+.hero-term-wrap:focus-visible .hero-term-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.hero-term-tooltip .tooltip-title { margin-bottom: 10px; }
+
 .hero-authors { margin-bottom: 36px; padding: 14px 18px; border-left: 3px solid var(--gold); background: rgba(201,146,42,0.07); }
 .hero-authors-names { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--ink); font-weight: 600; margin-bottom: 2px; }
 .hero-authors-org { font-family: 'Spectral SC', serif; font-size: 11px; letter-spacing: 0.15em; color: var(--gold); text-transform: uppercase; }
