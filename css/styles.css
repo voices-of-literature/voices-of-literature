@@ -36,6 +36,10 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; j
   max-width: 100%;
   cursor: help;
 }
+.hero-desc-tail {
+  font-weight: 400;
+  color: inherit;
+}
 .hero-term-trigger {
   font-weight: 600;
   font-family: inherit;
