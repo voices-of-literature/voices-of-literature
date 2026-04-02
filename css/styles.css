@@ -315,7 +315,7 @@ section { padding: 100px 80px; position: relative; }
 /* TIMELINE */
 #timeline { background: var(--parchment-dark); }
 .timeline-entries { position: relative; }
-.timeline-line { position: absolute; left: 72px; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, var(--vermillion), var(--gold), transparent); }
+.timeline-line { position: absolute; left: 134px; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, var(--vermillion), var(--gold), transparent); }
 .timeline-entry { display: grid; grid-template-columns: 140px 1fr; gap: 32px; margin-bottom: 36px; align-items: start; opacity: 0; transform: translateX(-20px); transition: opacity 0.6s, transform 0.6s; }
 .timeline-entry.visible { opacity: 1; transform: translateX(0); }
 .timeline-year { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--vermillion); text-align: right; padding-right: 24px; padding-top: 4px; position: relative; }
@@ -376,7 +376,7 @@ footer span { font-family: 'Spectral SC', serif; }
   #methodology { padding: 64px 24px; }
   footer { flex-direction: column; gap: 12px; padding: 32px 24px; }
   .timeline-entry { grid-template-columns: 80px 1fr; gap: 16px; }
-  .timeline-line { left: 40px; }
+  .timeline-line { left: 69px; }
   .theme-evo-row { grid-template-columns: 1fr; }
   .theme-evo-name { text-align: left; }
   .evo-axis { margin-left: 0; margin-right: 0; }
