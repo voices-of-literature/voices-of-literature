@@ -77,6 +77,128 @@ section { padding: 100px 80px; position: relative; }
 
 /* CITATIONS */
 #citations { background: var(--pale); }
+
+/* Analytical framing (motivation) */
+.analytical-framing { margin-bottom: 80px; }
+.analytical-framing-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 44px 48px 48px;
+  background: linear-gradient(165deg, rgba(255,255,255,0.65) 0%, rgba(246,237,224,0.35) 100%);
+  border: 1px solid var(--cream-mid);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
+  position: relative;
+}
+.analytical-framing-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 48px;
+  right: 48px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  opacity: 0.55;
+}
+.analytical-framing-ornament {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  letter-spacing: 0.45em;
+  color: rgba(181,52,26,0.35);
+  margin-bottom: 28px;
+}
+.analytical-framing-lede {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--ink);
+  text-align: center;
+  line-height: 1.45;
+  max-width: 820px;
+  margin: 0 auto 36px;
+}
+.analytical-framing-lede em { font-style: italic; }
+.analytical-framing-lede em:nth-of-type(1) { color: var(--vermillion); }
+.analytical-framing-lede em:nth-of-type(2) { color: var(--accent-blue); }
+.analytical-framing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--cream-mid);
+  background: var(--cream-mid);
+}
+.analytical-pillar {
+  background: var(--pale);
+  padding: 32px 36px 36px;
+  text-align: left;
+}
+.analytical-pillar--horizontal {
+  border-top: 3px solid var(--vermillion);
+}
+.analytical-pillar--vertical {
+  border-top: 3px solid var(--accent-blue);
+}
+.analytical-pillar-label {
+  font-family: 'Spectral SC', serif;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.analytical-pillar--horizontal .analytical-pillar-label { color: var(--vermillion); }
+.analytical-pillar--vertical .analytical-pillar-label { color: var(--accent-blue); }
+.analytical-pillar-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.25;
+  max-width: 120px;
+}
+.analytical-pillar-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+.analytical-pillar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.analytical-pillar-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 14px;
+  font-size: 15.5px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.analytical-pillar-list li:last-child { margin-bottom: 0; }
+.analytical-pillar-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.85;
+}
+.analytical-pillar--horizontal .analytical-pillar-list li::before {
+  background: linear-gradient(135deg, var(--vermillion), var(--gold));
+}
+.analytical-pillar--vertical .analytical-pillar-list li::before {
+  background: linear-gradient(135deg, var(--accent-blue), var(--gold));
+}
+
 .citations-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; background: var(--cream-mid); }
 .citations-col { background: var(--pale); padding: 40px 32px; }
 .citations-col-title { font-family: 'Spectral SC', serif; font-size: 11px; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 28px; padding-bottom: 16px; border-bottom: 1px solid var(--cream-mid); }
@@ -176,6 +298,11 @@ footer span { font-family: 'Spectral SC', serif; }
   .hero-left { padding: 80px 24px 48px; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
   .citations-grid { grid-template-columns: 1fr; }
+  .analytical-framing-inner { padding: 32px 22px 36px; }
+  .analytical-framing-inner::before { left: 22px; right: 22px; }
+  .analytical-framing-grid { grid-template-columns: 1fr; }
+  .analytical-pillar { padding: 28px 22px 30px; }
+  .analytical-framing { margin-bottom: 56px; }
   .length-grid { grid-template-columns: 1fr; }
   .method-grid { grid-template-columns: 1fr; }
   #methodology { padding: 64px 24px; }
