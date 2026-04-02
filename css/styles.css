@@ -40,8 +40,15 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; j
   font-weight: 600;
   font-family: inherit;
   color: var(--ink);
-  border-bottom: 1px dotted rgba(181,52,26,0.45);
-  transition: border-color 0.2s, color 0.2s;
+  text-decoration: underline dotted var(--vermillion);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s, background-color 0.2s, text-decoration-color 0.2s;
+  background-color: rgba(181,52,26,0.09);
+  border-radius: 3px;
+  padding: 1px 6px 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 .hero-term-tooltip {
   position: absolute;
@@ -75,17 +82,16 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; j
 }
 .hero-term-tooltip .tooltip-title { margin-bottom: 10px; }
 
-/* Show description only while the pointer is over the competition name (not on tap/focus). */
-@media (hover: hover) and (pointer: fine) {
-  .hero-term-wrap:hover .hero-term-trigger {
-    border-bottom-color: var(--vermillion);
-    color: var(--vermillion);
-  }
-  .hero-term-wrap:hover .hero-term-tooltip {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
+/* Tooltip only while pointer is over the phrase (no :focus — avoids “stuck open” after click). */
+.hero-term-wrap:hover .hero-term-trigger {
+  color: var(--vermillion);
+  background-color: rgba(181,52,26,0.16);
+  text-decoration-color: var(--gold);
+}
+.hero-term-wrap:hover .hero-term-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .hero-authors { margin-bottom: 36px; padding: 14px 18px; border-left: 3px solid var(--gold); background: rgba(201,146,42,0.07); }
