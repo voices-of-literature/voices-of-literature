@@ -366,11 +366,19 @@ section { padding: 100px 80px; position: relative; }
 
 /* METHODOLOGY */
 #methodology { background: var(--ink); color: var(--parchment); padding: 80px; }
-.method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.08); margin-top: 48px; }
-.method-card { background: var(--ink); padding: 36px 32px; }
-.method-num { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 800; color: rgba(255,255,255,0.06); line-height: 1; margin-bottom: 12px; }
-.method-title { font-family: 'Playfair Display', serif; font-size: 17px; color: var(--gold); margin-bottom: 12px; }
-.method-body { font-size: 14.5px; color: rgba(246,237,224,0.6); line-height: 1.75; }
+/* PIPELINE LAYOUT */
+.pipeline-layout { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: start; margin-top: 56px; }
+.pipeline-diagram { position: sticky; top: 100px; }
+.pipeline-diagram img { width: 100%; height: auto; display: block; opacity: 0.92; filter: brightness(1.05); }
+.pipeline-steps { display: flex; flex-direction: column; gap: 0; }
+.pipeline-step { display: flex; gap: 24px; align-items: flex-start; padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.pipeline-step:last-child { border-bottom: none; }
+.pipeline-step-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 800; color: rgba(201,146,42,0.18); line-height: 1; flex-shrink: 0; width: 52px; text-align: right; padding-top: 2px; }
+.pipeline-step-body { flex: 1; }
+.pipeline-step-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 600; color: var(--gold); margin-bottom: 8px; }
+.pipeline-step-body p { font-size: 14.5px; color: rgba(246,237,224,0.6); line-height: 1.75; margin: 0; }
+.pipeline-step-body em { color: rgba(246,237,224,0.45); font-style: italic; }
+.pipeline-step-body code { font-family: 'Spectral SC', serif; font-size: 12px; color: var(--gold); background: rgba(201,146,42,0.1); padding: 1px 6px; border-radius: 2px; letter-spacing: 0.04em; }
 
 /* FOOTER */
 footer { background: #110e0b; padding: 48px 80px; display: flex; justify-content: space-between; align-items: center; color: rgba(246,237,224,0.4); font-size: 13px; letter-spacing: 0.05em; }
@@ -396,7 +404,8 @@ footer span { font-family: 'Spectral SC', serif; }
   .analytical-pillar { padding: 28px 22px 30px; }
   .analytical-framing { margin-bottom: 56px; }
   .length-grid { grid-template-columns: 1fr; }
-  .method-grid { grid-template-columns: 1fr; }
+  .pipeline-layout { grid-template-columns: 1fr; }
+  .pipeline-diagram { position: static; max-width: 220px; margin: 0 auto; }
   #methodology { padding: 64px 24px; }
   footer { flex-direction: column; gap: 12px; padding: 32px 24px; }
   .timeline-entry { grid-template-columns: 80px 1fr; gap: 16px; }
