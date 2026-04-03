@@ -299,7 +299,7 @@ nav {
   background-image: url('../assets/spider_lily.png');
   background-size: 400px;
   background-repeat: repeat;
-  opacity: 0.25;
+  opacity: 1.0;
 }
 
 .hero-bg-hatch {
