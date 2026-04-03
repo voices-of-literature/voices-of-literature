@@ -50,6 +50,28 @@
     btn.addEventListener('click', () => switchTab(btn.dataset.tab));
   });
 
+  // Source PDF viewer
+  const sourceFrame = document.getElementById('sourcePdfFrame');
+  const sourcePdfTitle = document.getElementById('sourcePdfTitle');
+  const sourceTitles = {
+    'assets/source1_text_based.pdf': 'Source 1 — Text-Based',
+    'assets/source2_text_based.pdf': 'Source 2 — Text-Based',
+    'assets/source3_image_based.pdf': 'Source 3 — Image-Based',
+  };
+  document.querySelectorAll('.source-tab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.source-tab').forEach((t) => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      const src = tab.dataset.src;
+      if (sourceFrame) sourceFrame.src = src;
+      if (sourcePdfTitle) sourcePdfTitle.textContent = sourceTitles[src] || src;
+    });
+  });
+
   const chartDefaults = {
     plugins: {
       legend: { display: false },
