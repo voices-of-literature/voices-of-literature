@@ -73,6 +73,9 @@
   });
 
   const chartDefaults = {
+    layout: {
+      padding: { top: 24 } // Extra space above bars for medals
+    },
     plugins: {
       legend: { display: false },
       tooltip: {
@@ -94,6 +97,28 @@
         beginAtZero: true,
       },
     },
+  };
+
+  const medalPlugin = {
+    id: 'medalPlugin',
+    afterDatasetsDraw(chart, args, options) {
+      const { ctx } = chart;
+      const meta = chart.getDatasetMeta(0);
+      const medals = ['🥇', '🥈', '🥉'];
+      
+      ctx.save();
+      ctx.font = '22px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'bottom';
+      
+      meta.data.forEach((bar, index) => {
+        const medal = medals[index];
+        if (medal) {
+          ctx.fillText(medal, bar.x, bar.y - 6);
+        }
+      });
+      ctx.restore();
+    }
   };
 
   if (typeof Chart !== 'undefined') {
@@ -120,6 +145,7 @@
           },
         },
       },
+      plugins: [medalPlugin]
     });
 
     new Chart(document.getElementById('chartNLXH'), {
@@ -145,6 +171,7 @@
           },
         },
       },
+      plugins: [medalPlugin]
     });
   }
 })();
