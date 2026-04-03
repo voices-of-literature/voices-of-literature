@@ -103,7 +103,7 @@
         labels: ['First Prize', 'Second Prize', 'Third Prize'],
         datasets: [{
           data: [2877, 2524, 2908],
-          backgroundColor: ['#b5341a', '#c9922a', '#2e4a6b'],
+          backgroundColor: ['#c9922a', '#a5a5a5', '#b0704d'],
           borderRadius: 0,
           borderSkipped: false,
         }],
@@ -128,7 +128,7 @@
         labels: ['First Prize', 'Second Prize', 'Third Prize'],
         datasets: [{
           data: [1511, 1525, 2850],
-          backgroundColor: ['#b5341a', '#c9922a', '#2e4a6b'],
+          backgroundColor: ['#c9922a', '#a5a5a5', '#b0704d'],
           borderRadius: 0,
           borderSkipped: false,
         }],
