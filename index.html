@@ -679,26 +679,46 @@
       </div>
     </div>
 
-    <div class="method-grid fade-up">
-      <div class="method-card">
-        <div class="method-num">01</div>
-        <div class="method-title">Collection</div>
-        <div class="method-body">Award-winning essays from Vietnam's National Excellent Student Competition in
-          Literature — Literary Essays and Social Essays — gathered spanning 1961 to 2024. The corpus comprises 114
-          essays: 77 literary and 37 social.</div>
+    <div class="pipeline-layout fade-up">
+      <div class="pipeline-diagram">
+        <img src="assets/digitalization_preprocessing_pipeline.svg" alt="Digitalization & Preprocessing Pipeline Diagram">
       </div>
-      <div class="method-card">
-        <div class="method-num">02</div>
-        <div class="method-title">Digitization</div>
-        <div class="method-body">OCR (Optical Character Recognition) was applied to approximately 650 pages of archival
-          A4 documents, followed by preprocessing pipelines to clean and normalize the text into structured data.</div>
-      </div>
-      <div class="method-card">
-        <div class="method-num">03</div>
-        <div class="method-title">Analysis</div>
-        <div class="method-body">Two analytical dimensions: <em>horizontal</em> (cross-essay patterns in citations and
-          themes) and <em>vertical</em> (longitudinal shifts across decades in authors cited, literary traditions, and
-          evolving social discourse).</div>
+      <div class="pipeline-steps">
+        <div class="pipeline-step">
+          <div class="pipeline-step-num">01</div>
+          <div class="pipeline-step-body">
+            <div class="pipeline-step-title">Line Bounding Boxes</div>
+            <p>Tesseract detects word-level boxes per page. Invalid detections are filtered, then merged into line-level regions, sorted top-to-bottom, and padded to avoid character clipping at edges.</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="pipeline-step-num">02</div>
+          <div class="pipeline-step-body">
+            <div class="pipeline-step-title">VietOCR Recognition</div>
+            <p>Each line region is cropped from the page image and passed to VietOCR for text recognition. Empty or invalid predictions are discarded to ensure clean output.</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="pipeline-step-num">03</div>
+          <div class="pipeline-step-body">
+            <div class="pipeline-step-title">Concatenation</div>
+            <p>Recognized lines are joined with newlines per page, then appended in document order across all pages to produce the complete extracted text.</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="pipeline-step-num">04</div>
+          <div class="pipeline-step-body">
+            <div class="pipeline-step-title">Noise Removal</div>
+            <p>Watermarks, page numbers, and embedded links are stripped from the OCR output — e.g. <em>"Chuyên trang ôn Văn"</em>, <em>"TaiLieuOnThi.Net"</em>, residual page numbers.</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="pipeline-step-num">05</div>
+          <div class="pipeline-step-body">
+            <div class="pipeline-step-title">Structured Data</div>
+            <p>Each cleaned document is converted into structured JSON entries with four fields: <code>year</code>, <code>problem</code>, <code>solution</code>, <code>award</code>.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
