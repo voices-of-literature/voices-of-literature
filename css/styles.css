@@ -1469,7 +1469,11 @@ footer span {
   }
 
   .hero-right {
-    display: none;
+    min-height: 400px;
+  }
+
+  .hero-poem {
+    padding: 64px 24px;
   }
 
   .hero-left {
