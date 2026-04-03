@@ -330,15 +330,7 @@ nav {
   border: 1px solid rgba(201, 146, 42, 0.13);
 }
 
-.hero-bg-frame::after {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  background: radial-gradient(circle at top left, rgba(201, 146, 42, 0.2) 0%, transparent 16%), radial-gradient(circle at top right, rgba(201, 146, 42, 0.2) 0%, transparent 16%), radial-gradient(circle at bottom left, rgba(201, 146, 42, 0.2) 0%, transparent 16%), radial-gradient(circle at bottom right, rgba(201, 146, 42, 0.2) 0%, transparent 16%);
-}
+
 
 .hero-rule-top,
 .hero-rule-bottom {
