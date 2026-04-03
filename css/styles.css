@@ -284,13 +284,22 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #0f0c09;
+  background: #14231d;
 }
 
 .hero-bg-base {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 40%, #2a1a0e 0%, #0f0c09 60%);
+  background: radial-gradient(ellipse at 30% 40%, rgba(81, 122, 106, 0.5) 0%, rgba(20, 35, 29, 0.9) 70%);
+}
+
+.hero-bg-lily {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/spider_lily.png');
+  background-size: 400px;
+  background-repeat: repeat;
+  opacity: 0.25;
 }
 
 .hero-bg-hatch {
@@ -385,16 +394,16 @@ nav {
 .hero-poem-text {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: clamp(17px, 1.9vw, 23px);
+  font-size: clamp(34px, 3.8vw, 46px);
   color: rgba(246, 237, 224, 0.93);
-  line-height: 2.1;
+  line-height: 1.6;
   margin-bottom: 32px;
   position: relative;
 }
 
 .hero-poem-text::before {
   content: '\201C';
-  font-size: 90px;
+  font-size: 140px;
   color: rgba(201, 146, 42, 0.13);
   position: absolute;
   top: -24px;
@@ -412,7 +421,7 @@ nav {
 
 .hero-poem-source {
   font-family: 'Spectral SC', serif;
-  font-size: 11px;
+  font-size: 22px;
   letter-spacing: 0.22em;
   color: var(--gold);
   text-transform: uppercase;
