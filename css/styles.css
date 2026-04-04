@@ -1259,6 +1259,18 @@ section {
   padding: 80px;
 }
 
+/* PIPELINE INTRO */
+.pipeline-intro {
+  font-family: 'Crimson Pro', serif;
+  font-size: 22px;
+  line-height: 1.5;
+  color: rgba(246, 237, 224, 0.85);
+  max-width: 800px;
+  margin: 64px auto 0;
+  padding: 0 24px;
+  text-align: center;
+}
+
 /* PIPELINE LAYOUT */
 .pipeline-layout {
   display: grid;
