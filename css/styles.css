@@ -179,7 +179,7 @@ nav {
   top: calc(100% + 14px);
   left: 0;
   width: min(calc(100vw - 64px), 400px);
-  max-width: 400px;
+  max-width: 540px;
   background: var(--ink);
   color: var(--parchment);
   padding: 18px 20px;
@@ -231,7 +231,7 @@ nav {
 
 .hero-authors-names {
   font-family: 'Playfair Display', serif;
-  font-size: 15px;
+  font-size: 18px;
   color: var(--ink);
   font-weight: 600;
   padding: 14px 18px 2px;
@@ -240,7 +240,7 @@ nav {
 
 .hero-authors-org {
   font-family: 'Spectral SC', serif;
-  font-size: 11px;
+  font-size: 15px;
   letter-spacing: 0.15em;
   color: var(--gold);
   text-transform: uppercase;
@@ -249,7 +249,7 @@ nav {
 
 .hero-sharing {
   font-family: 'Crimson Pro', serif;
-  font-size: 16.5px;
+  font-size: 18px;
   line-height: 1.6;
   color: var(--ink);
   opacity: 0.82;
@@ -488,7 +488,7 @@ section {
 
 .section-label {
   font-family: 'Spectral SC', serif;
-  font-size: 11px;
+  font-size: 15px;
   letter-spacing: 0.25em;
   color: var(--vermillion);
   text-transform: uppercase;
@@ -516,9 +516,9 @@ section {
 
 .section-subtitle {
   margin-top: 16px;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--muted);
-  max-width: 580px;
+  max-width: 600px;
   line-height: 1.75;
 }
 
@@ -962,7 +962,7 @@ section {
 
 .length-insight-title {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
+  font-size: 24px;
   font-style: italic;
   color: var(--gold);
   margin-bottom: 20px;
@@ -970,14 +970,14 @@ section {
 }
 
 .length-insight p {
-  font-size: 15.5px;
+  font-size: 18px;
   color: rgba(246, 237, 224, 0.8);
   line-height: 1.75;
   margin-bottom: 16px;
 }
 
 .length-callout {
-  margin-top: 24px;
+  margin-top: 25px;
   padding: 16px 20px;
   border-left: 3px solid var(--vermillion);
   background: rgba(181, 52, 26, 0.1);
@@ -1046,7 +1046,7 @@ section {
 .timeline-body {
   background: var(--pale);
   padding: 20px 24px;
-  font-size: 15px;
+  font-size: 17px;
   color: var(--ink);
   line-height: 1.7;
 }
@@ -1182,7 +1182,7 @@ section {
 
 .source-viewer-label {
   font-family: 'Spectral SC', serif;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.25em;
   color: rgba(201, 146, 42, 0.7);
   text-transform: uppercase;
@@ -1403,14 +1403,14 @@ section {
 
 .pipeline-step-title {
   font-family: 'Playfair Display', serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--gold);
   margin-bottom: 8px;
 }
 
 .pipeline-step-body p {
-  font-size: 14.5px;
+  font-size: 16px;
   color: rgba(246, 237, 224, 0.6);
   line-height: 1.75;
   margin: 0;
@@ -1477,7 +1477,7 @@ section {
 
 .pipeline-illus-caption {
   font-family: 'Spectral SC', serif;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.16em;
   color: rgba(201, 146, 42, 0.65);
   text-transform: uppercase;
