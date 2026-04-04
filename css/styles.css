@@ -242,6 +242,16 @@ nav {
   text-transform: uppercase;
 }
 
+.hero-sharing {
+  font-family: 'Crimson Pro', serif;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.5;
+  color: rgba(246, 237, 224, 0.75);
+  margin-top: 32px;
+  max-width: 540px;
+}
+
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -424,6 +434,24 @@ nav {
 section {
   padding: 100px 80px;
   position: relative;
+}
+
+.project-motivation {
+  max-width: 800px;
+  margin: 0 auto 80px;
+  text-align: center;
+  font-family: 'Crimson Pro', serif;
+  font-size: 19.5px;
+  line-height: 1.6;
+  color: rgba(246, 237, 224, 0.85);
+}
+
+.project-motivation p {
+  margin-bottom: 24px;
+}
+
+.project-motivation p:last-child {
+  margin-bottom: 0;
 }
 
 .section-header {
