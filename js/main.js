@@ -175,14 +175,17 @@
     });
   }
 
-  // Audio Icon TTS
+  // Audio Icon Player
   const navAudioIcon = document.getElementById('nav-audio-icon');
+  let currentAudio = null;
   if (navAudioIcon) {
     navAudioIcon.addEventListener('click', () => {
-      window.speechSynthesis.cancel();
-      const msg = new SpeechSynthesisUtterance("văn học là cách tốt nhất để hiểu được văn hóa và tâm hồn của một dân tộc");
-      msg.lang = 'vi-VN';
-      window.speechSynthesis.speak(msg);
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+      }
+      currentAudio = new Audio('assets/hpny_1961.mp3');
+      currentAudio.play().catch(e => console.error("Audio playback failed:", e));
     });
   }
 })();
