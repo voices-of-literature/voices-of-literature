@@ -174,4 +174,15 @@
       plugins: [medalPlugin]
     });
   }
+
+  // Audio Icon TTS
+  const navAudioIcon = document.getElementById('nav-audio-icon');
+  if (navAudioIcon) {
+    navAudioIcon.addEventListener('click', () => {
+      window.speechSynthesis.cancel();
+      const msg = new SpeechSynthesisUtterance("văn học là cách tốt nhất để hiểu được văn hóa và tâm hồn của một dân tộc");
+      msg.lang = 'vi-VN';
+      window.speechSynthesis.speak(msg);
+    });
+  }
 })();
