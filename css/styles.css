@@ -245,9 +245,8 @@ nav {
 
 .hero-sharing {
   font-family: 'Crimson Pro', serif;
-  font-style: italic;
-  font-size: 14.5px;
-  line-height: 1.55;
+  font-size: 16.5px;
+  line-height: 1.6;
   color: var(--ink);
   opacity: 0.82;
   border-top: 1px solid rgba(201, 146, 42, 0.25);
@@ -439,34 +438,19 @@ section {
 }
 
 .project-motivation {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  max-width: 1000px;
-  margin: 0 auto 80px;
-}
-
-.motivation-card {
-  background: rgba(201, 146, 42, 0.06);
-  border-left: 3px solid var(--vermillion);
-  padding: 28px 32px;
-}
-
-.motivation-card-label {
-  font-family: 'Spectral SC', serif;
-  font-size: 10px;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--vermillion);
-  margin-bottom: 14px;
-}
-
-.motivation-card p {
+  margin-top: 40px;
   font-family: 'Crimson Pro', serif;
-  font-size: 17.5px;
-  line-height: 1.65;
-  color: var(--ink);
-  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(30, 22, 14, 0.78);
+}
+
+.project-motivation p {
+  margin-bottom: 20px;
+}
+
+.project-motivation p:last-child {
+  margin-bottom: 0;
 }
 
 .section-header {
