@@ -94,7 +94,6 @@ nav {
 .hero-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
 }
 
 .hero-left {
@@ -446,7 +445,7 @@ section {
   margin-top: 0;
   padding: 64px 120px;
   font-family: 'Crimson Pro', serif;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 1.75;
   color: rgba(30, 22, 14, 0.78);
   background: var(--parchment);
