@@ -1349,7 +1349,7 @@ section {
 /* PIPELINE LAYOUT */
 .pipeline-layout {
   display: grid;
-  grid-template-columns: 620px 1fr;
+  grid-template-columns: 760px 1fr;
   gap: 48px;
   align-items: start;
   margin-top: 56px;
@@ -1609,8 +1609,8 @@ footer span {
 
   .pipeline-diagram {
     position: static;
-    width: 150%;
-    margin: 0 0 48px -25%;
+    width: 130%;
+    margin: 0 0 48px -15%;
   }
 
   #methodology {
