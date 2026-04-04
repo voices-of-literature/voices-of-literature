@@ -446,13 +446,14 @@ section {
   margin-top: 0;
   padding: 64px 80px;
   font-family: 'Crimson Pro', serif;
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: 17.5px;
+  line-height: 1.75;
   color: rgba(30, 22, 14, 0.78);
   background: var(--parchment);
-  column-count: 2;
-  column-gap: 64px;
-  column-rule: 1px solid var(--cream-mid);
+  text-align: center;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-motivation p {
@@ -1514,7 +1515,7 @@ footer span {
     padding: 64px 24px;
   }
 
-  .hero {
+  .hero-columns {
     grid-template-columns: 1fr;
   }
 
@@ -1528,6 +1529,10 @@ footer span {
 
   .hero-left {
     padding: 80px 24px 48px;
+  }
+
+  .project-motivation {
+    padding: 48px 24px;
   }
 
   .hero-stats {
