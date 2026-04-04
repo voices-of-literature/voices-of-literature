@@ -1200,6 +1200,15 @@ section {
   background: rgba(201, 146, 42, 0.4);
 }
 
+.source-viewer-note {
+  font-family: 'Crimson Pro', serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(246, 237, 224, 0.65);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
 .source-tabs {
   display: flex;
   gap: 2px;
