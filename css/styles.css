@@ -1349,7 +1349,7 @@ section {
 /* PIPELINE LAYOUT */
 .pipeline-layout {
   display: grid;
-  grid-template-columns: 760px 1fr;
+  grid-template-columns: 820px 1fr;
   gap: 48px;
   align-items: start;
   margin-top: 56px;
