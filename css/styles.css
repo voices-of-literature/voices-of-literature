@@ -444,16 +444,35 @@ section {
 
 .project-motivation {
   margin-top: 0;
-  padding: 64px 80px;
+  padding: 64px 120px;
   font-family: 'Crimson Pro', serif;
   font-size: 17.5px;
   line-height: 1.75;
   color: rgba(30, 22, 14, 0.78);
   background: var(--parchment);
-  text-align: center;
+  text-align: left;
   max-width: 860px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+}
+
+.project-motivation::before,
+.project-motivation::after {
+  content: '';
+  position: absolute;
+  top: 56px;
+  bottom: 56px;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
+}
+
+.project-motivation::before {
+  left: 56px;
+}
+
+.project-motivation::after {
+  right: 56px;
 }
 
 .project-motivation p {
@@ -1532,7 +1551,12 @@ footer span {
   }
 
   .project-motivation {
-    padding: 48px 24px;
+    padding: 48px 32px;
+  }
+
+  .project-motivation::before,
+  .project-motivation::after {
+    display: none;
   }
 
   .hero-stats {
