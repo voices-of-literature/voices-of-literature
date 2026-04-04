@@ -446,12 +446,12 @@ section {
   margin-top: 0;
   padding: 64px 120px;
   font-family: 'Crimson Pro', serif;
-  font-size: 21px;
+  font-size: 19px;
   line-height: 1.75;
   color: rgba(30, 22, 14, 0.78);
   background: var(--parchment);
   text-align: left;
-  max-width: 64vw;
+  max-width: 72vw;
   margin-left: auto;
   margin-right: auto;
   position: relative;
