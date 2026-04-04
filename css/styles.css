@@ -1609,8 +1609,8 @@ footer span {
 
   .pipeline-diagram {
     position: static;
-    width: 130%;
-    margin: 0 0 48px -15%;
+    width: 150%;
+    margin: 0 0 48px -25%;
   }
 
   #methodology {
