@@ -84,12 +84,17 @@ nav {
 
 /* HERO */
 .hero {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   padding-top: 80px;
+}
+
+.hero-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
 }
 
 .hero-left {
@@ -438,11 +443,16 @@ section {
 }
 
 .project-motivation {
-  margin-top: 40px;
+  margin-top: 0;
+  padding: 64px 80px;
   font-family: 'Crimson Pro', serif;
   font-size: 17px;
   line-height: 1.7;
   color: rgba(30, 22, 14, 0.78);
+  background: var(--parchment);
+  column-count: 2;
+  column-gap: 64px;
+  column-rule: 1px solid var(--cream-mid);
 }
 
 .project-motivation p {
