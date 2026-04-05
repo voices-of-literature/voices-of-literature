@@ -105,12 +105,12 @@
       const { ctx } = chart;
       const meta = chart.getDatasetMeta(0);
       const medals = ['🥇', '🥈', '🥉'];
-      
+
       ctx.save();
       ctx.font = '22px sans-serif';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'bottom';
-      
+
       meta.data.forEach((bar, index) => {
         const medal = medals[index];
         if (medal) {
@@ -184,7 +184,7 @@
         currentAudio.pause();
         currentAudio.currentTime = 0;
       }
-      currentAudio = new Audio('assets/hpny_1961.mp3');
+      currentAudio = new Audio('assets/background_music.mp3');
       currentAudio.play().catch(e => console.error("Audio playback failed:", e));
     });
   }
